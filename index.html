@@ -27,20 +27,20 @@ body{font-family:'Be Vietnam Pro',sans-serif;min-height:100vh;transition:backgro
   --star-color:rgba(201,162,39,.25);
 }
 [data-theme="light"]{
-  --bg:#fdfaf3; --bg2:#f8f3e8; --bg3:#f0e8d5; --bg4:#e8dfc8;
-  --card:#ffffff; --card2:#faf6ee;
-  --border:rgba(140,100,30,.14); --border2:rgba(140,100,30,.32);
-  --gold:#9a6f10; --gold2:#b8860b; --gold3:rgba(154,111,16,.09);
-  --text:#1c1810; --text2:#5c4e38; --text3:#9c8c72;
-  --red:#c0392b; --green:#1e7d4e;
-  --shadow:rgba(80,60,10,.18);
-  --hero-bg:linear-gradient(170deg,#fdf8ee 0%,#f0e4c8 55%,#fdf8ee 100%);
-  --block-head:#f0e8d4; --price-hover:rgba(154,111,16,.05);
-  --input-bg:#fff; --input-border:rgba(0,0,0,.14);
-  --admin-bg:#fdfaf4; --bar:#f0e8d4;
-  --nav-bg:#fdf8ee; --nav-border:rgba(140,100,30,.14);
-  --home-gradient:linear-gradient(160deg,#fdf8ee 0%,#f0e4c8 40%,#fdfaf3 100%);
-  --star-color:rgba(154,111,16,.2);
+  --bg:#faf5eb; --bg2:#f3ead8; --bg3:#ecdfc4; --bg4:#e0d0a8;
+  --card:#fffef8; --card2:#f8f0de;
+  --border:rgba(120,85,20,.16); --border2:rgba(120,85,20,.36);
+  --gold:#8b5e10; --gold2:#c4850c; --gold3:rgba(139,94,16,.11);
+  --text:#1a1408; --text2:#4e3d20; --text3:#8c7550;
+  --red:#b83030; --green:#1a6e3a;
+  --shadow:rgba(60,40,5,.22);
+  --hero-bg:linear-gradient(160deg,#f5edd8 0%,#e8d9b8 50%,#f5edd8 100%);
+  --block-head:#ecdfc4; --price-hover:rgba(139,94,16,.07);
+  --input-bg:#fffef8; --input-border:rgba(0,0,0,.16);
+  --admin-bg:#faf5eb; --bar:#ecdfc4;
+  --nav-bg:#f3ead8; --nav-border:rgba(120,85,20,.18);
+  --home-gradient:linear-gradient(160deg,#f0e6cc 0%,#e4d5ae 45%,#f0e6cc 100%);
+  --star-color:rgba(139,94,16,.25);
 }
 
 body{background:var(--bg);color:var(--text)}
@@ -52,15 +52,38 @@ body{background:var(--bg);color:var(--text)}
 .desk-nav{
   display:none;
   background:var(--bar);
-  border-bottom:1px solid var(--border);
+  border-bottom:1px solid var(--border2);
   position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 20px var(--shadow);
 }
 @media(min-width:800px){
-  .desk-nav{display:flex;align-items:center;height:60px;padding:0 24px;gap:0}
-  body{background:var(--bg2)}
+  .desk-nav{display:flex;align-items:center;height:60px;padding:0 40px;gap:0}
+  body{background:var(--bg3)}
   .shell{max-width:100%;min-height:auto;border-radius:0;background:transparent}
-  .content{max-width:860px;margin:0 auto;width:100%;padding:0 24px 40px}
+  .content{max-width:960px;margin:0 auto;width:100%;padding:0 40px 56px}
   .bnav{display:none!important}
+  .home-hero{border-radius:24px;margin:28px 0 0;border:1px solid var(--border2);box-shadow:0 8px 40px var(--shadow)}
+  .home-cards{padding:28px 0 16px;gap:16px}
+  .hc{padding:24px 18px;border-radius:18px}
+  .hc:hover{transform:translateY(-3px);box-shadow:0 8px 28px var(--shadow)}
+  .hc-icon{font-size:36px;margin-bottom:12px}
+  .hc-name{font-size:17px;margin-bottom:5px}
+  .hc-sub{font-size:11px}
+  .hc-price{font-size:13px;margin-top:8px}
+  .home-about,.home-contact{margin:16px 0;border-radius:18px}
+  .ha-body{padding:22px}
+  .ha-features{grid-template-columns:repeat(4,1fr);gap:10px}
+  .home-sec-hd{padding:28px 0 8px}
+  .home-tagline{font-size:16px;max-width:480px}
+  .home-title{font-size:48px}
+  .home-title span{font-size:36px}
+  .home-logo-circle{width:110px;height:110px;margin-bottom:20px}
+  .home-logo-inner{width:98px;height:98px}
+  .blk{margin:0 0 12px;border-radius:16px}
+  .cat-hdr{padding:28px 0 12px}
+  .note{margin:0 0 12px}
+  .home-contact{margin:16px 0}
+  .hco-body{padding:18px;gap:12px}
 }
 
 .desk-logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0;margin-right:32px}
@@ -88,7 +111,7 @@ body{background:var(--bg);color:var(--text)}
   transition:.15s;white-space:nowrap;
 }
 .dn-link:hover{color:var(--gold);background:var(--gold3)}
-.dn-link.on{color:var(--gold);background:var(--gold3);border:1px solid var(--border)}
+.dn-link.on{color:var(--gold);background:var(--gold3);border:1px solid var(--border2);font-weight:600}
 .desk-nav-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .icon-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--border);background:var(--bg3);color:var(--gold);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
 .icon-btn:hover{background:var(--bg4)}
@@ -161,9 +184,8 @@ body{background:var(--bg);color:var(--text)}
 .home-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gold3);border:1px solid var(--border2);border-radius:20px;padding:6px 14px;font-size:11px;color:var(--gold);font-weight:600;letter-spacing:.5px}
 
 /* HOME CARDS */
-.home-cards{padding:20px 14px 10px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(min-width:800px){.home-cards{grid-template-columns:repeat(3,1fr)}}
-.hc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 14px;text-align:center;transition:.2s;cursor:pointer}
+.home-cards{padding:20px 14px 10px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.hc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 14px;text-align:center;transition:all .22s ease;cursor:pointer}
 .hc:hover{border-color:var(--border2);background:var(--card2)}
 .hc-icon{font-size:28px;margin-bottom:8px}
 .hc-name{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:var(--text);margin-bottom:3px}
@@ -374,25 +396,19 @@ body{background:var(--bg);color:var(--text)}
         <div class="hc-icon">🃏</div>
         <div class="hc-name">Bài Tây</div>
         <div class="hc-sub">Playing Cards</div>
-        <div class="hc-price"></div>
+        <div class="hc-price">20K</div>
       </div>
       <div class="hc" onclick="goTab('tarot')">
         <div class="hc-icon">✨</div>
         <div class="hc-name">Tarot</div>
         <div class="hc-sub">Tarot Cards</div>
-        <div class="hc-price"></div>
+        <div class="hc-price">15K</div>
       </div>
-      <div class="hc" onclick="goTab('kinhdich')" style="grid-column:1/-1">
+      <div class="hc" onclick="goTab('kinhdich')">
         <div class="hc-icon">☯</div>
         <div class="hc-name">Kinh Dịch</div>
         <div class="hc-sub">Bát Quái – I Ching</div>
-        <div class="hc-price"></div>
-      </div>
-      <div class="hc" onclick="goTab('tamly')">
-        <div class="hc-icon">✨🫂</div>
-        <div class="hc-name">Tâm Lý Học</div>
-        <div class="hc-sub">Tarot Cards</div>
-        <div class="hc-price"></div>
+        <div class="hc-price">35K</div>
       </div>
     </div>
 
