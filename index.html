@@ -335,22 +335,22 @@ body{background:var(--bg);color:var(--text)}
       <div class="hc" onclick="goTab('baitay')">
         <div class="hc-icon">🃏</div>
         <div class="hc-name">Bài Tây</div>
-        <div class="hc-sub">Playing Cards</div>
+        <div class="hc-sub">Chính xác 80-90%</div>
       </div>
       <div class="hc" onclick="goTab('tarot')">
         <div class="hc-icon">✨</div>
         <div class="hc-name">Tarot</div>
-        <div class="hc-sub">Tarot Cards</div>
+        <div class="hc-sub">Chính xác 60-70%</div>
       </div>
       <div class="hc" onclick="goTab('kinhdich')">
         <div class="hc-icon">☯</div>
         <div class="hc-name">Kinh Dịch</div>
-        <div class="hc-sub">Bát Quái – I Ching</div>
+        <div class="hc-sub">Chính xác 90-98%</div>
       </div>
       <div class="hc" onclick="goTab('tamly')">
-        <div class="hc-icon">🧠</div>
-        <div class="hc-name">Tâm Lý Học</div>
-        <div class="hc-sub">Psychology</div>
+        <div class="hc-icon">☪️</div>
+        <div class="hc-name">Lenormand</div>
+        <div class="hc-sub">Chính xác 70-87%</div>
       </div>
     </div>
 
@@ -360,7 +360,7 @@ body{background:var(--bg);color:var(--text)}
       </div>
       <div class="ha-body">
         <div class="ha-year">📅 Tháng 12 / 2025 · Mùa Đông</div>
-        <div class="ha-text">
+        <div class="ha-text">    
           <strong>T-Share Trải Bài</strong> ra đời vào mùa Đông năm 2025 với mục đích hướng tới là <strong>đưa ra cho các bạn các góc nhìn</strong>, hỗ trợ các bạn tìm ra đáp án và nhìn nhận ra được những suy nghĩ của mình có nên hay không.<br><br>
           Từ đó T-Share giúp bạn <strong>hiểu hơn về chính bản thân mình</strong>, giải đáp được thắc mắc của bạn trong tâm trí, giúp bạn được thư thái đầu óc và đỡ stress hơn.
         </div>
@@ -417,7 +417,7 @@ body{background:var(--bg);color:var(--text)}
   <div class="sec" id="sec-baitay"></div>
   <div class="sec" id="sec-tarot"></div>
   <div class="sec" id="sec-kinhdich"></div>
-  <div class="sec" id="sec-tamly"></div>
+  <div class="sec" id="sec-lenormand"></div>
 </div>
 
 <!-- BOTTOM NAV (mobile) -->
@@ -434,8 +434,8 @@ body{background:var(--bg);color:var(--text)}
   <button class="ni" id="ni-kinhdich" onclick="goTab('kinhdich')">
     <span class="ni-ico">☯</span><span class="ni-lbl">Kinh Dịch</span>
   </button>
-  <button class="ni" id="ni-tamly" onclick="goTab('tamly')">
-    <span class="ni-ico">🧠</span><span class="ni-lbl">Tâm Lý</span>
+  <button class="ni" id="ni-tamly" onclick="goTab('lenormand')">
+    <span class="ni-ico">☪️</span><span class="ni-lbl">Lenormand</span>
   </button>
   <button class="ni" onclick="openAdmin()">
     <span class="ni-ico">⚙</span><span class="ni-lbl">Quản lý</span>
@@ -462,13 +462,13 @@ body{background:var(--bg);color:var(--text)}
       <button class="at on" onclick="aTab('baitay',this)">🃏 Bài Tây</button>
       <button class="at" onclick="aTab('tarot',this)">✨ Tarot</button>
       <button class="at" onclick="aTab('kinhdich',this)">☯ Kinh Dịch</button>
-      <button class="at" onclick="aTab('tamly',this)">🧠 Tâm Lý</button>
+      <button class="at" onclick="aTab('tamly',this)">☪️ Lenormand</button>
     </div>
     <div class="ae on" id="e-baitay"></div>
     <div class="ae" id="e-tarot"></div>
     <div class="ae" id="e-kinhdich"></div>
     <div class="ae" id="e-tamly"></div>
-    <button class="btn-sv" onclick="saveAll()">💾 Lưu Lên Firebase</button>
+    <button class="btn-sv" onclick="saveAll()">💾 Lưu </button>
     <button class="btn-pd" onclick="exportPDF()">📄 Xuất PDF</button>
   </div>
 </div>
@@ -513,7 +513,7 @@ function toggleTheme(){
 if(localStorage.getItem('ts-theme')==='light'){dark=true;toggleTheme();}
 
 const DEF={
-  baitay:{label:"Bài Tây",emoji:"🃏",sub:"Playing Cards",blocks:[
+  baitay:{label:"Bài Tây",emoji:"🃏",sub:"Chính xác 80-90%",blocks:[
     {title:"CHỦ ĐỀ HIỆN TẠI",badge:"Hiện tại",items:[
       {name:"Người Yêu Hiện Tại",price:"30K"},{name:"Người Yêu Cũ",price:"30K"},
       {name:"Bạn Bè",price:"30K"},{name:"Học Tập",price:"30K"},{name:"Công Việc Hiện Tại",price:"30K"}]},
@@ -521,7 +521,7 @@ const DEF={
       {name:"Người Yêu Tương Lai",price:"55K"},{name:"Học Tập Tương Lai",price:"55K"},{name:"Công Việc Tương Lai",price:"55K"}]}
   ],times:[{label:"10 phút",price:"20K"},{label:"15 phút",price:"30K"},{label:"20 phút",price:"35K"},
            {label:"30 phút",price:"40K"},{label:"40 phút",price:"45K"},{label:"50 phút",price:"50K"},{label:"60 phút",price:"55K"}]},
-  tarot:{label:"Tarot",emoji:"✨",sub:"Tarot Cards",blocks:[
+  tarot:{label:"Tarot",emoji:"✨",sub:"Chính xác 60-70%",blocks:[
     {title:"CHỦ ĐỀ HIỆN TẠI",badge:"Hiện tại",items:[
       {name:"Người Yêu Hiện Tại",price:"20K"},{name:"Người Yêu Cũ",price:"20K"},
       {name:"Bạn Bè",price:"20K"},{name:"Học Tập",price:"20K"},{name:"Công Việc Hiện Tại",price:"20K"}]},
@@ -529,7 +529,7 @@ const DEF={
       {name:"Người Yêu Tương Lai",price:"30K"},{name:"Học Tập Tương Lai",price:"30K"},{name:"Công Việc Tương Lai",price:"30K"}]}
   ],times:[{label:"10 phút",price:"15K"},{label:"15 phút",price:"20K"},{label:"20 phút",price:"25K"},
            {label:"30 phút",price:"30K"},{label:"40 phút",price:"35K"},{label:"50 phút",price:"40K"},{label:"60 phút",price:"45K"}]},
-  kinhdich:{label:"Kinh Dịch",emoji:"☯",sub:"Bát Quái – I Ching",blocks:[
+  kinhdich:{label:"Kinh Dịch",emoji:"☯",sub:"Chính xác 90-98%",blocks:[
     {title:"CHỦ ĐỀ HIỆN TẠI",badge:"Hiện tại",items:[
       {name:"Người Yêu Hiện Tại",price:"45K"},{name:"Người Yêu Cũ",price:"45K"},
       {name:"Bạn Bè",price:"45K"},{name:"Học Tập",price:"45K"},{name:"Công Việc Hiện Tại",price:"45K"}]},
@@ -537,11 +537,11 @@ const DEF={
       {name:"Người Yêu Tương Lai",price:"70K"},{name:"Học Tập Tương Lai",price:"70K"},{name:"Công Việc Tương Lai",price:"70K"}]}
   ],times:[{label:"10 phút",price:"35K"},{label:"15 phút",price:"45K"},{label:"20 phút",price:"50K"},
            {label:"30 phút",price:"55K"},{label:"40 phút",price:"60K"},{label:"50 phút",price:"65K"},{label:"60 phút",price:"70K"}]},
-  tamly:{label:"Tâm Lý Học",emoji:"🧠",sub:"Psychology",blocks:[
+  tamly:{label:"Lenormand",emoji:"☪️",sub:"Chính xác 70-87%",blocks:[
     {title:"CHỦ ĐỀ HIỆN TẠI",badge:"Hiện tại",items:[
       {name:"Cảm xúc & Tâm trạng",price:"25K"},{name:"Mối quan hệ",price:"25K"},
       {name:"Stress & Lo âu",price:"25K"},{name:"Lòng tự trọng",price:"25K"},{name:"Định hướng bản thân",price:"25K"}]},
-    {title:"CHỦ ĐỀ PHÂN TÍCH SÂU",badge:"Chuyên sâu",items:[
+    {title:"CHỦ ĐỀ TƯƠNG LAI",badge:"Chuyên sâu",items:[
       {name:"Phân tích tính cách",price:"50K"},{name:"Mô hình hành vi",price:"50K"},{name:"Mục tiêu & Động lực",price:"50K"}]}
   ],times:[{label:"10 phút",price:"20K"},{label:"15 phút",price:"25K"},{label:"20 phút",price:"30K"},
            {label:"30 phút",price:"35K"},{label:"40 phút",price:"40K"},{label:"50 phút",price:"45K"},{label:"60 phút",price:"50K"}]}
