@@ -273,7 +273,7 @@ body{background:var(--bg);color:var(--text)}
     <button class="dn-link" id="dn-baitay" onclick="goTab('baitay')">🃏 Bài Tây</button>
     <button class="dn-link" id="dn-tarot" onclick="goTab('tarot')">✨ Tarot</button>
     <button class="dn-link" id="dn-kinhdich" onclick="goTab('kinhdich')">☯ Kinh Dịch</button>
-    <button class="dn-link" id="dn-tamly" onclick="goTab('tamly')">🧠 Tâm Lý Học</button>
+    <button class="dn-link" id="dn-lenormand" onclick="goTab('tamly')">☪️ Lenormandc</button>
   </div>
   <div class="desk-nav-right">
     <button class="icon-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
@@ -347,7 +347,7 @@ body{background:var(--bg);color:var(--text)}
         <div class="hc-name">Kinh Dịch</div>
         <div class="hc-sub">Chính xác 90-98%</div>
       </div>
-      <div class="hc" onclick="goTab('tamly')">
+      <div class="hc" onclick="goTab('lenormand')">
         <div class="hc-icon">☪️</div>
         <div class="hc-name">Lenormand</div>
         <div class="hc-sub">Chính xác 70-87%</div>
@@ -434,7 +434,7 @@ body{background:var(--bg);color:var(--text)}
   <button class="ni" id="ni-kinhdich" onclick="goTab('kinhdich')">
     <span class="ni-ico">☯</span><span class="ni-lbl">Kinh Dịch</span>
   </button>
-  <button class="ni" id="ni-tamly" onclick="goTab('lenormand')">
+  <button class="ni" id="ni-lenormand" onclick="goTab('lenormand')">
     <span class="ni-ico">☪️</span><span class="ni-lbl">Lenormand</span>
   </button>
   <button class="ni" onclick="openAdmin()">
@@ -462,7 +462,7 @@ body{background:var(--bg);color:var(--text)}
       <button class="at on" onclick="aTab('baitay',this)">🃏 Bài Tây</button>
       <button class="at" onclick="aTab('tarot',this)">✨ Tarot</button>
       <button class="at" onclick="aTab('kinhdich',this)">☯ Kinh Dịch</button>
-      <button class="at" onclick="aTab('tamly',this)">☪️ Lenormand</button>
+      <button class="at" onclick="aTab('lenormand',this)">☪️ Lenormand</button>
     </div>
     <div class="ae on" id="e-baitay"></div>
     <div class="ae" id="e-tarot"></div>
@@ -537,7 +537,7 @@ const DEF={
       {name:"Người Yêu Tương Lai",price:"70K"},{name:"Học Tập Tương Lai",price:"70K"},{name:"Công Việc Tương Lai",price:"70K"}]}
   ],times:[{label:"10 phút",price:"35K"},{label:"15 phút",price:"45K"},{label:"20 phút",price:"50K"},
            {label:"30 phút",price:"55K"},{label:"40 phút",price:"60K"},{label:"50 phút",price:"65K"},{label:"60 phút",price:"70K"}]},
-  tamly:{label:"Lenormand",emoji:"☪️",sub:"Chính xác 70-87%",blocks:[
+  lenormand:{label:"Lenormand",emoji:"☪️",sub:"Chính xác 70-87%",blocks:[
     {title:"CHỦ ĐỀ HIỆN TẠI",badge:"Hiện tại",items:[
       {name:"Cảm xúc & Tâm trạng",price:"25K"},{name:"Mối quan hệ",price:"25K"},
       {name:"Stress & Lo âu",price:"25K"},{name:"Lòng tự trọng",price:"25K"},{name:"Định hướng bản thân",price:"25K"}]},
