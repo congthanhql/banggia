@@ -273,7 +273,7 @@ body{background:var(--bg);color:var(--text)}
     <button class="dn-link" id="dn-baitay" onclick="goTab('baitay')">🃏 Bài Tây</button>
     <button class="dn-link" id="dn-tarot" onclick="goTab('tarot')">✨ Tarot</button>
     <button class="dn-link" id="dn-kinhdich" onclick="goTab('kinhdich')">☯ Kinh Dịch</button>
-    <button class="dn-link" id="dn-lenormand" onclick="goTab('tamly')">☪️ Lenormandc</button>
+    <button class="dn-link" id="dn-lenormand" onclick="goTab('lenormand')">☪️ Lenormandc</button>
   </div>
   <div class="desk-nav-right">
     <button class="icon-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
@@ -467,7 +467,7 @@ body{background:var(--bg);color:var(--text)}
     <div class="ae on" id="e-baitay"></div>
     <div class="ae" id="e-tarot"></div>
     <div class="ae" id="e-kinhdich"></div>
-    <div class="ae" id="e-tamly"></div>
+    <div class="ae" id="e-lenormand"></div>
     <button class="btn-sv" onclick="saveAll()">💾 Lưu </button>
     <button class="btn-pd" onclick="exportPDF()">📄 Xuất PDF</button>
   </div>
@@ -550,7 +550,7 @@ let D=JSON.parse(JSON.stringify(DEF));
 let cur='home';
 
 async function load(){
-  try{const s=await db.ref('menu').once('value');if(s.val()){D=s.val();if(!D.tamly)D.tamly=JSON.parse(JSON.stringify(DEF.tamly));}}catch(e){}
+  try{const s=await db.ref('menu').once('value');if(s.val()){D=s.val();if(!D.lenormand)D.lenormand=JSON.parse(JSON.stringify(DEF.lenormand));}}catch(e){}
   renderAll();
 }
 
@@ -570,7 +570,7 @@ function renderSec(k){
   h+=`<div class="upd">Cập nhật: ${new Date().toLocaleDateString('vi-VN')}</div>`;
   el.innerHTML=h;
 }
-function renderAll(){['baitay','tarot','kinhdich','tamly'].forEach(k=>{renderSec(k);buildEdit(k);})}
+function renderAll(){['baitay','tarot','kinhdich','lenormand'].forEach(k=>{renderSec(k);buildEdit(k);})}
 
 function goTab(k){
   cur=k;
